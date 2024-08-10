@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class Client {
     public static void main(String[] args) {
-        try (Socket clientSocket = new Socket("localhost", Main.port)) {
+        try (Socket clientSocket = new Socket("netology.homework", Main.port)) {
             System.out.println("ClientSocket is created");
             PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
             BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
